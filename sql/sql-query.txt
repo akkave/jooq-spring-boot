@@ -1,0 +1,33 @@
+
+CREATE DATABASE mylocaldb;
+USE mylocaldb;
+CREATE TABLE `abc` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) DEFAULT NULL,
+  `rank` int(11) DEFAULT NULL,
+  `currentDate` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `company` (
+  `company_id` int(11) NOT NULL,
+  `company_name` varchar(50) DEFAULT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `employee` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `emp_id` int(11) NOT NULL,
+  `emp_name` varchar(50) DEFAULT NULL,
+  `company_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `person` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(255) NOT NULL,
+  `last_name` varchar(255) NOT NULL,
+  `added_date` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
